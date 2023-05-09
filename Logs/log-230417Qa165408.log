@@ -1,0 +1,6 @@
+16:54:13.804  INFO  tests.TestBase - Name of method -->loginSuccess
+16:54:20.867  INFO  tests.TestBase - Name of method -->loginSuccess1
+16:54:26.096  INFO  tests.TestBase - Name of method -->loginSuccessModel
+16:54:32.771  INFO  tests.TestBase - Name of method -->loginUnregistered
+16:54:33.952  INFO  tests.TestBase - Name of method -->loginWrongEmail
+16:54:44.469  INFO  tests.TestBase - Name of method -->loginWrongPassword

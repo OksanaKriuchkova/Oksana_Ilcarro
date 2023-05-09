@@ -30,7 +30,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("White")
                 .setEmail("white"+i+"@gmail.com")
                 .setPassword("White12345$");
-
+        logger.info("Test start with test data --->" + user.toString());
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicyXY();
@@ -46,6 +46,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("Simpson")
                 .setEmail("simpson@gmail.com")
                 .setPassword("Simp12345$");
+        logger.info("Test start with test data --->" + user.toString());
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicyXY();
@@ -61,6 +62,7 @@ public class RegistrationTests extends TestBase{
                 .setLastName("")
                 .setEmail("simpson@gmail.com")
                 .setPassword("Simp12345$");
+        logger.info("Test start with test data --->" + user.toString());
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicyXY();
@@ -68,13 +70,14 @@ public class RegistrationTests extends TestBase{
         Assert.assertEquals(app.getHelperUser().getErrorText(),"Last name is required");
         Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
     }
-    @Test(enabled = false)
+    @Test
     public void registrationWrongEmail(){
         User user = new User()
                 .setFirstName("Gomer")
                 .setLastName("Simpson")
                 .setEmail("simpsongmail.com")
                 .setPassword("Simp12345$");
+        logger.info("Test start with test data --->" + user.toString());
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicyXY();
@@ -84,13 +87,14 @@ public class RegistrationTests extends TestBase{
         Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
 
     }
-    @Test(enabled = false)
+    @Test
     public void registrationWrongPassword(){
         User user = new User()
                 .setFirstName("Gomer")
                 .setLastName("Simpson")
                 .setEmail("simpson@gmail.com")
                 .setPassword("Simp12");
+        logger.info("Test start with test data --->" + user.toString());
         app.getHelperUser().openRegistrationForm();
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicyXY();
